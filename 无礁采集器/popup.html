@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>无礁采集器</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+        .tab-container {
+            margin-bottom: 15px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 2px solid transparent;
+        }
+        .tab.active {
+            color: #4CAF50;
+            border-bottom-color: #4CAF50;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .setting-item {
+            margin-bottom: 15px;
+        }
+        .setting-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+        .setting-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .setting-checkbox {
+            margin-right: 8px;
+        }
+        .setting-radio-group {
+            margin-top: 5px;
+        }
+        .setting-radio-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .about-section {
+            text-align: center;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .developer-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .developer-info p {
+            margin: 5px 0;
+        }
+        .status-message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>无礁采集器</h1>
+        
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="settings">设置</div>
+                <div class="tab" data-tab="about">关于我们</div>
+            </div>
+            
+            <div class="tab-content active" id="settings">
+                <div class="setting-item">
+                    <label class="setting-label">悬浮窗</label>
+                    <label>
+                        <input type="checkbox" class="setting-checkbox" id="floating-window-toggle">
+                        启用悬浮窗
+                    </label>
+                </div>
+                
+                <div class="setting-item">
+                    <label class="setting-label">提交地址</label>
+                    <input type="text" class="setting-input" id="api-url" placeholder="http://127.0.0.1:9999/api.php">
+                </div>
+                
+
+                
+                <button class="button" id="save-settings">保存设置</button>
+                <div class="status-message" id="status-message" style="display: none;"></div>
+            </div>
+            
+            <div class="tab-content" id="about">
+                <div class="about-section">
+                    <img class="avatar" src="http://q1.qlogo.cn/g?b=qq&nk=1722791510&s=100" alt="开发者头像">
+                    <h2>无礁</h2>
+                    <div class="developer-info">
+                        <p>QQ: 1722791510</p>
+                        <p>版本: 1.0.0</p>
+                        <p>一款强大的网页资源采集工具</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
