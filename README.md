@@ -1,4 +1,3 @@
-![截图1](https://zbcg.gdou.edu.cn/upload/2026/01/30/cgesmwua/QQ20260130-164628.jpg)
 # ucollector无礁每日大赛采集器Edge浏览器扩展
 
 ### 1.项目介绍
